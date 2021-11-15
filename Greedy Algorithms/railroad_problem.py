@@ -1,4 +1,5 @@
-# Taken from practice 5
+# Inspired by practice 5
+# Written by Itamar Shechter
 # This is an NP problem so we dont know a good solution for this.
 
 """
@@ -18,7 +19,7 @@ Legal rail is a rail that all the linked parts are connected with the same conne
 
 
 # naive solution - will take a lot of time with big input
-def rail_road(rail_len: int, connectors: int, parts: list[list[int]], last_connection = -1) -> int:
+def rail_road(rail_len: int, connectors: int, parts: list[list[int]], last_connection=-1) -> int:
     # base of recursion
     if rail_len == 0:
         return 0
