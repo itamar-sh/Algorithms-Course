@@ -40,10 +40,11 @@ def calculate_cell(row: int, col: int, table: list[list[int]], matrices_list):
     if row == col:
         return 0
     min_value = math.prod(matrices_list)
-    for k in range(1, row - col + 1):
-        up_cell = table[row][col + k]    #calculate_cell(row, k, table, matrices_list)
-        right_cell = table[row - k][col]        #calculate_cell(k + 1, col, table, matrices_list)
-        current_operations = matrices_list[col]*matrices_list[row - k + 1]*matrices_list[row+1]
+    d = row - col + 1
+    for k in range(1, d):
+        up_cell = table[row - k + 1][col]
+        right_cell = table[row][col + k]
+        current_operations = matrices_list[col]*matrices_list[col + k]*matrices_list[row + 1]
         sum_operations = up_cell + right_cell + current_operations
         min_value = min(min_value, sum_operations)
     return min_value
