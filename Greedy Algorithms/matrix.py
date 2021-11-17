@@ -1,3 +1,5 @@
+# helper class - used in the files:
+#
 class Matrix:
     """ Matrix of int, represents with list of lists with the same lengths. Similar to table.
 
