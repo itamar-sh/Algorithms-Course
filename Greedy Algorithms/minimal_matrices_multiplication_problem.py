@@ -10,7 +10,6 @@ Different order will give the same matrix but not in the same amount of operatio
 """
 import math
 from renderer_tables import *
-from matrix import *
 
 def minimal_matrices_multiplication(matrices_list: list[int]) ->int:
     """

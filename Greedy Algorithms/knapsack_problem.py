@@ -43,7 +43,8 @@ def knapsack_problem(knapsack_weight: int, items: list[tuple[int, int]]):
         for j in range(knapsack_weight):  # every j is a weight
             # check the step of the recursion, after that the table(i,j) should be filled
             knapsack_problem_helper(j, items[i][0], items[i][1], (i, j), table)
-    print_table(table)
+    # uncomment if you want to print the table
+    # print_table(table)
     return table[0][knapsack_weight - 1]
 
 def knapsack_problem_test():
