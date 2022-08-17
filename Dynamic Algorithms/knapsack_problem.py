@@ -12,8 +12,6 @@ list[int], represents the indexes of the items that will bring the maximum value
 weight of knapsack_weight
 """
 
-from renderer_tables import *
-
 def knapsack_problem_helper(current_weight: int, item_value: int, item_weight: int, coordinates: tuple[int, int], table: list[list[int]]):
     if item_weight > current_weight:
         # put the last cell in the current cell - so we don't insert new item
@@ -51,6 +49,16 @@ def knapsack_problem_test():
     assert 200 == knapsack_problem(50, [(150, 30), (100, 25), (100, 25)])
 
 
-knapsack_problem_test()
+def print_table(table: list[list[int]]):
+    print(" | " + " - "*len(table[0]) + " | ")
+    for i in range(len(table)):
+        print(" | ", end="")
+        for j in range(len(table[i])):
+            print(table[i][j], end=" ")
+        print(" | ")
+    print(" | " + " - " * len(table[0]) + " | ")
+
+if __name__ == '__main__':
+    knapsack_problem_test()
 
 

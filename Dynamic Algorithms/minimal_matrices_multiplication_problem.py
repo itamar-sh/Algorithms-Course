@@ -9,7 +9,7 @@ we want to know in which order we should multiply them.
 Different order will give the same matrix but not in the same amount of operations to get the matrix.
 """
 import math
-from renderer_tables import *
+
 
 def minimal_matrices_multiplication(matrices_list: list[int]) ->int:
     """
@@ -62,4 +62,14 @@ def minimal_matrices_multiplication_test():
     # assert 10000 == minimal_matrices_multiplication([10, 50, 20])
     print(minimal_matrices_multiplication([10, 50, 20, 100]))
 
-minimal_matrices_multiplication_test()
+def print_table(table: list[list[int]]):
+    print(" | " + " - "*len(table[0]) + " | ")
+    for i in range(len(table)):
+        print(" | ", end="")
+        for j in range(len(table[i])):
+            print(table[i][j], end=" ")
+        print(" | ")
+    print(" | " + " - " * len(table[0]) + " | ")
+
+if __name__ == '__main__':
+    minimal_matrices_multiplication_test()

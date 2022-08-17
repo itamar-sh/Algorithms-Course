@@ -14,7 +14,6 @@ Output:
 int: the cost of legal rail in length of rail_len.
 Legal rail is a rail that all the linked parts are connected with the same connectors.
 """
-from adjusted_graph import *
 
 def all_pairs_shortest_paths(graph: Graph, weight_func: callable[Vertex], parts: list[list[int]]) -> int:
     return 1
