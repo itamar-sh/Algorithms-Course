@@ -12,7 +12,7 @@ How many unique users visit this repository:
   [![HitCount](https://hits.dwyl.com/itamar-sh/Algorithms-Course.svg?style=flat-square&show=unique)](http://hits.dwyl.com/itamar-sh/Algorithms-Course)
 
 ## Greedy Algorithms
-This is Concept of solving problems with iterations such that each iteration we try to "catch" as many as we can.
+This is concept of solving problems with iterations such that each iteration we try to "catch" as many as we can.
 
 ## Dynamic Algorithms
 Many problems are composed from smaller problems from the same type.
